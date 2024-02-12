@@ -1,1 +1,114 @@
 
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primary: #0b212f;
+    --color-secondary: #fff;
+    --color-bg1: #dff6ff;
+    --color-bg2: #47b5ff;
+    --color-bg3: #1363df;
+    --transition: all 400ms ease;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    background-color: var(--color-secondary);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ########################## Start Project ########################## */
+
+.wrapper{
+    width: 65%;
+    background-color: var(--color-bg3);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 .3em .9em .1em rgba(0, 0, 0, 0.1);
+}
+
+/* ########################## Details Card ########################## */
+
+.wrapper .details{
+    background-color: var(--color-bg1);
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2em;
+    color: var(--color-primary);
+}
+
+.details .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.details .info .city {
+font-size: 3em;
+    font-weight: 700;
+}
+
+.details .info .city span {
+    font-weight: 800;
+    color: var(--color-bg3);
+}
+
+
+.details .info .method,
+.details .info .fullDate {
+    font-size: 1.6em;
+    font-weight: 700;
+    opacity: 55%;
+}
+
+/* .details .upcoming,
+.details .fullDate {
+    justify-self: flex-end;
+} */
+
+.details .upcoming {
+    justify-self: flex-end;
+    /* width: 12em;
+    height: 10em; */
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 0.5em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .3em;
+    font-size: 1.7em;
+    font-weight: 800;
+}
+
+
+
+.details .upcoming .countdown {
+    font-size: 2em;
+}
+
+.details .upcoming .prayerOfTime {
+    font-weight: 500;
+}
+
+
+
+/* ########################## Prayer Time Card ########################## */
+.wrapper .prayerTime{
+    background-image: linear-gradient(to bottom, var(--color-bg1)30%, var(--color-bg1)30%, var(--color-bg2));
+    padding: 2em;
+    display: none;
+}
