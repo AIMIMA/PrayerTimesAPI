@@ -13,6 +13,7 @@
     --color-bg1: #dff6ff;
     --color-bg2: #47b5ff;
     --color-bg3: #1363df;
+    --radius: 12px;
     --transition: all 400ms ease;
 }
 
@@ -27,12 +28,18 @@ body{
     align-items: center;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* ########################## Start Project ########################## */
 
 .wrapper{
     width: 65%;
-    background-color: var(--color-bg3);
-    border-radius: 6px;
+    background-image: linear-gradient(to bottom, var(--color-bg1)30%, var(--color-bg1)30%, var(--color-bg2));
+    border-radius: var(--radius);
     overflow: hidden;
     box-shadow: 0 .3em .9em .1em rgba(0, 0, 0, 0.1);
 }
@@ -40,7 +47,6 @@ body{
 /* ########################## Details Card ########################## */
 
 .wrapper .details{
-    background-color: var(--color-bg1);
     padding: 2em;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -73,22 +79,23 @@ font-size: 3em;
     opacity: 55%;
 }
 
-/* .details .upcoming,
-.details .fullDate {
-    justify-self: flex-end;
-} */
+.btn {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1.6em;
+    font-weight: 800;
+    color: var(--color-bg3);
+    text-transform: capitalize;
+    cursor: pointer;
+}
 
 .details .upcoming {
     justify-self: flex-end;
-    /* width: 12em;
-    height: 10em; */
     background-color: #fff;
-    border-radius: 6px;
+    border-radius: var(--radius);
     padding: 0.5em 1em;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: .3em;
     font-size: 1.7em;
     font-weight: 800;
@@ -108,7 +115,49 @@ font-size: 3em;
 
 /* ########################## Prayer Time Card ########################## */
 .wrapper .prayerTime{
-    background-image: linear-gradient(to bottom, var(--color-bg1)30%, var(--color-bg1)30%, var(--color-bg2));
     padding: 2em;
-    display: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.wrapper .prayerTime > div {
+    width: calc(80% / 6);
+    height: 100px;
+    padding: 20px;
+    background-color: var(--color-bg1);
+    color: var(--color-primary);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrapper .prayerTime > div h1 {
+    font-size: 1.6em;
+    font-weight: 800;
+}
+.wrapper .prayerTime > div .time{
+    font-size: 1.5em;
+}
+
+
+/* ########################## Prayer Time Card ########################## */
+.change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+#chooseCountry,
+#chooseCity {
+    background-color: var(--color-bg1);
+    width: 130px;
+    min-width: fit-content;
+    border-radius: 6px;
+    outline: none;
+    padding: 5px 10px;
+    transition: var(--transition);
 }
